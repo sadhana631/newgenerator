@@ -28,6 +28,24 @@ const fontSizesOptionsList = [
     displayText: '32',
   },
 ]
+
+import {Component} from 'react'
+
+import {
+  AppContainer,
+  MemeGenerator,
+  Heading,
+  FormAndMemeContainer,
+  MemeGenerator,
+  TextContent,
+  MemeGeneratorForm,
+  CustomLabel,
+  CustomInput,
+  CustomSelect,
+  CustomOption,
+  GenerateButton,
+} from './styledcomponents'
+
 class MemeGenerator extends Component {
   state = {
     backgroundImageUrlInput: '',
