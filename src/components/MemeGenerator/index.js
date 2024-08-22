@@ -36,7 +36,7 @@ import {
   MemeGenerator,
   Heading,
   FormAndMemeContainer,
-  MemeGenerator,
+  MemeContainer,
   TextContent,
   MemeGeneratorForm,
   CustomLabel,

@@ -7,7 +7,7 @@ export const AppContainer = styled.div`
   min-height:100vh;
 `
 
-export const MemeGeneratorContainer = styled.div`
+export const MemeContainer = styled.div`
   display:flex;
   flex-direction:column;
   width:100%;
