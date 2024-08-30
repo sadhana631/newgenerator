@@ -1,3 +1,20 @@
+import {Component} from 'react'
+
+import {
+  AppContainer,
+  MemeGeneratorContainer,
+  Heading,
+  FormAndMemeContainer,
+  MemeContainer,
+  TextContent,
+  MemeGeneratorForm,
+  CustomLabel,
+  CustomInput,
+  CustomSelect,
+  CustomOption,
+  GenerateButton,
+} from './styledComponents'
+
 const fontSizesOptionsList = [
   {
     optionId: '8',
@@ -29,30 +46,13 @@ const fontSizesOptionsList = [
   },
 ]
 
-import {Component} from 'react'
-
-import {
-  AppContainer,
-  MemeGenerator,
-  Heading,
-  FormAndMemeContainer,
-  MemeContainer,
-  TextContent,
-  MemeGeneratorForm,
-  CustomLabel,
-  CustomInput,
-  CustomSelect,
-  CustomOption,
-  GenerateButton,
-} from './styledcomponents'
-
 class MemeGenerator extends Component {
   state = {
     backgroundImageUrlInput: '',
     topTextInput: '',
     bottomTextInput: '',
     activeFontSizeOptionId: fontSizesOptionsList[0].optionId,
-    backgroundImageUrlInput: '',
+    backgroundImageUrl: '',
     topText: '',
     bottomText: '',
     activeFontSizeId: '',
@@ -80,7 +80,7 @@ class MemeGenerator extends Component {
       backgroundImageUrlInput,
       topTextInput,
       bottomTextInput,
-      activeFontSizeId,
+      activeFontSizeOptionId,
     } = this.state
 
     this.setState({
@@ -109,7 +109,7 @@ class MemeGenerator extends Component {
           onChange={this.onChangeBackgroundImage}
           placeholder="Enter the Image URL"
         />
-        <CustomLabel htmlFor="topText"></CustomLabel>
+        <CustomLabel htmlFor="Top Text"></CustomLabel>
         <CustomInput
           type="text"
           id="topText"
@@ -143,9 +143,13 @@ class MemeGenerator extends Component {
   }
 
   renderMeme = () => {
-    const {backgroundImageUrl, topText, bottomText, activeFontSizeId} =
-      this.state
-
+    const {
+      backgroundImageUrl, 
+      topText, 
+      bottomText, 
+      activeFontSizeId, 
+    } = this.state  
+      
     return (
       <MemeGenerator data-testid="meme" backgroundImage={backgroundImageUrl}>
         <TextContent activeFontSizeId={activeFontSizeId}>{topText}</TextContent>
@@ -160,8 +164,9 @@ class MemeGenerator extends Component {
     return (
       <AppContainer>
         <MemeGeneratorContainer>
-          <Heading>MemeGenerator</Heading>
+          <Heading>Meme Generator</Heading>
           <FormAndMemeContainer>
+            {this.renderMeme()}
             {this.renderMemeGeneratorForm()}
           </FormAndMemeContainer>
         </MemeGeneratorContainer>
