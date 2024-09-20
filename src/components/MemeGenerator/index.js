@@ -12,7 +12,7 @@ import {
   CustomInput,
   CustomSelect,
   CustomOption,
-  GenerateButton,
+  GeneratorButton,
 } from './styledComponents'
 
 const fontSizesOptionsList = [
@@ -137,7 +137,7 @@ class MemeGenerator extends Component {
             </CustomOption>
           ))}
         </CustomSelect>
-        <GenerateButton type="submit">Generate</GenerateButton>
+        <GeneratorButton type="submit">Generate</GeneratorButton>
       </MemeGeneratorForm>
     )
   }

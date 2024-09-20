@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import {Component} from 'raect'
+import {Component} from 'react'
 
 import {
   AppContainer,
@@ -15,8 +15,8 @@ import {
   CustomInput,
   CustomSelect,
   CustomOption,
-  GenerateButton,
-} from './styledComponents'
+  GeneratorButton,
+} from './styledComponents';
 
 ReactDOM.render(
   <React.StrictMode>
