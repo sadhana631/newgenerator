@@ -1,20 +1,5 @@
 import {Component} from 'react'
 
-import {
-  AppContainer,
-  MemeGeneratorContainer,
-  Heading,
-  FormAndMemeContainer,
-  MemeContainer,
-  TextContent,
-  MemeGeneratorForm,
-  CustomLabel,
-  CustomInput,
-  CustomSelect,
-  CustomOption,
-  GeneratorButton,
-} from './styledComponents'
-
 const fontSizesOptionsList = [
   {
     optionId: '8',

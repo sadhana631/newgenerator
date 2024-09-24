@@ -50,7 +50,7 @@ export const MemeContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-image: url(${props => backgroundImage});
+  background-image: url(${props => props.backgroundImage});
   background-size: cover;
   height: 300px;
   padding-left: 10px;
