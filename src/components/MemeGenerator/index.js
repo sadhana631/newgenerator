@@ -1,4 +1,17 @@
-import {Component} from 'react'
+import {
+  AppContainer,
+  MemeGeneratorContainer,
+  Heading,
+  FormAndMemeContainer,
+  MemeContainer,
+  TextContent,
+  MemeGeneratorForm,
+  CustomLabel,
+  CustomInput,
+  CustomSelect,
+  CustomOption,
+  GeneratorButton,
+} from './styledComponents'
 
 const fontSizesOptionsList = [
   {
@@ -82,7 +95,7 @@ class MemeGenerator extends Component {
       backgroundImageUrlInput,
       topTextInput,
       bottomTextInput,
-    } = this.setState
+    } = this.state;
 
     return (
       <MemeGeneratorForm onSubmit={this.onGenerateMeme}>
@@ -102,7 +115,7 @@ class MemeGenerator extends Component {
           onChange={this.onChangeTopTextInput}
           placeholder="Enter the Top Text"
         />
-        <CustomLabel htmlFor="topText">Bottom Text</CustomLabel>
+        <CustomLabel htmlFor="topText">Top Text</CustomLabel>
         <CustomInput
           type="text"
           id="bottomText"
@@ -128,16 +141,13 @@ class MemeGenerator extends Component {
   }
 
   renderMeme = () => {
-    const {backgroundImageUrl, topText, bottomText, activeFontSizeId} =
-      this.state
+    const {backgroundImageUrl, topText, bottomText, activeFontSizeId} = this.state;
 
     return (
-      <MemeGenerator data-testid="meme" backgroundImage={backgroundImageUrl}>
+      <MemeContainer data-testid="meme" backgroundImage={backgroundImageUrl}>
         <TextContent activeFontSizeId={activeFontSizeId}>{topText}</TextContent>
-        <TextContent activeFontSizeId={activeFontSizeId}>
-          {bottomText}
-        </TextContent>
-      </MemeGenerator>
+        <TextContent activeFontSizeId={activeFontSizeId}>{bottomText}</TextContent>
+      </MemeContainer>   
     )
   }
 
