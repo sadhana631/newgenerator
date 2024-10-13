@@ -1,3 +1,7 @@
+import { Component } from 'react';
+
+class MemeGenerator extends Component 
+
 import {
   AppContainer,
   MemeGeneratorContainer,
@@ -95,7 +99,7 @@ class MemeGenerator extends Component {
       backgroundImageUrlInput,
       topTextInput,
       bottomTextInput,
-    } = this.state;
+    } = this.state
 
     return (
       <MemeGeneratorForm onSubmit={this.onGenerateMeme}>
@@ -141,13 +145,16 @@ class MemeGenerator extends Component {
   }
 
   renderMeme = () => {
-    const {backgroundImageUrl, topText, bottomText, activeFontSizeId} = this.state;
+    const {backgroundImageUrl, topText, bottomText, activeFontSizeId} =
+      this.state
 
     return (
       <MemeContainer data-testid="meme" backgroundImage={backgroundImageUrl}>
         <TextContent activeFontSizeId={activeFontSizeId}>{topText}</TextContent>
-        <TextContent activeFontSizeId={activeFontSizeId}>{bottomText}</TextContent>
-      </MemeContainer>   
+        <TextContent activeFontSizeId={activeFontSizeId}>
+          {bottomText}
+        </TextContent>
+      </MemeContainer>
     )
   }
 
