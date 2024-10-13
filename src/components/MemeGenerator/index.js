@@ -1,7 +1,5 @@
 import { Component } from 'react';
 
-class MemeGenerator extends Component 
-
 import {
   AppContainer,
   MemeGeneratorContainer,
