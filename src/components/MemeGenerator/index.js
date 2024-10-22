@@ -1,12 +1,12 @@
-import { Component } from 'react';
+import {Component} from 'react' 
 
-import {
-  AppContainer,
-  MemeGeneratorContainer,
-  Heading,
-  FormAndMemeContainer,
-  MemeContainer,
-  TextContent,
+import {               
+  AppContainer,         
+  MemeGeneratorContainer, 
+  Heading,            
+  FormAndMemeContainer,      
+  MemeContainer,            
+  TextContent,            
   MemeGeneratorForm,
   CustomLabel,
   CustomInput,
